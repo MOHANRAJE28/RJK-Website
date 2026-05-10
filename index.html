@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>RJK</title>
+  <link rel="icon" type="image" href="weblogo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <!-- <div class="loader-container">
+    <div class="pre-loader">
+      <div class="loader"></div>
+      <div class="loader-bg"></div>
+    </div>
+
+    <div class="loader-content">
+      <div class="count">
+        <p>0</p>
+      </div>
+      <div class="copy">
+        <p class="ml16"> RJK Construction & Interiors </p>
+      </div>
+    </div>
+    <div class="loader-2"></div>
+  </div> -->
+
+
+  <!-- Header / Navbar -->
+  <header class="navbar" id="navbar">
+
+    <div class="logo">
+      <img src="logo.png" alt="RJK Construction Interiors Logo" />
+      <div class="brand-text">
+        <div class="brand-name">RJK</div>
+        <div class="brand-sub">CONSTRUCTION & INTERIORS</div>
+      </div>
+    </div>
+
+    <!-- Hamburger Button (mobile only) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-btn" onclick="closeMobileNav()"><span>Home</span></a>
+      <a href="#about" class="nav-btn" onclick="closeMobileNav()"><span>About</span></a>
+      <a href="#projects" class="nav-btn" onclick="closeMobileNav()"><span>Projects</span></a>
+      <a href="#services" class="nav-btn" onclick="closeMobileNav()"><span>Services</span></a>
+      <a href="#contact" class="nav-btn" onclick="closeMobileNav()"><span>Contact us</span></a>
+      <!-- CTA inside mobile menu -->
+      <a href="tel:+971569306090" class="nav-cta-mobile">Get Free Consultant</a>
+    </nav>
+
+    <!-- Mobile overlay backdrop -->
+    <div class="nav-overlay" id="navOverlay" onclick="closeMobileNav()"></div>
+
+    <div class="contact-btn">
+      <a href="tel:+971569306090">Get Free Consultant</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-main" id="home">
+    <div class="hero-left">
+      <h1>
+        Build Your Dream Home with Trusted
+        Construction &amp; Interiors
+      </h1>
+
+      <p>
+        We deliver high-quality residential and commercial construction with
+        modern designs, reliable execution, and complete customer satisfaction.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://wa.me/919629634417" target="_blank" rel="noopener noreferrer"
+          class="btn-primary btn-primary--wa">
+          Book a Consultation
+          <svg class="btn-wa-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+          </svg>
+        </a>
+        <a href="#" class="btn-secondary">Know More</a>
+      </div>
+
+      <!-- Stats row -->
+      <div class="hero-stats-row">
+        <div class="stat-item">
+          <span class="stat-num">2K+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100+</span>
+          <span class="stat-label">Our Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img src="h1.png" alt="Modern House" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="about-container">
+
+      <!-- Content: Left side -->
+      <div class="about-content">
+        <span class="about-eyebrow">Who We Are</span>
+        <h2 class="about-heading">
+          Crafting Spaces,<br />Building <span class="about-heading-accent">Dreams</span>
+        </h2>
+
+        <p class="about-para">
+          RJK Construction &amp; Interiors is a trusted name in construction and interior solutions, committed to
+          delivering high-quality workmanship and innovative designs.
+        </p>
+        <p class="about-para">
+          With a passion for excellence, we specialize in residential and commercial projects, ensuring every space is
+          built to perfection. From concept to completion, our team focuses on durability, aesthetics, and client
+          satisfaction.
+        </p>
+        <p class="about-para">
+          We believe in turning your vision into reality with reliable service, modern techniques, and attention to
+          detail.
+        </p>
+
+        <!-- Value pillars -->
+        <div class="about-pillars">
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                <path d="M9 22v-4h6v4"></path>
+                <path d="M8 6h.01"></path>
+                <path d="M16 6h.01"></path>
+                <path d="M12 6h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M16 10h.01"></path>
+                <path d="M16 14h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M8 14h.01"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Expert Construction</h4>
+              <p>Built to last with quality materials and precise execution.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"></path>
+                <path
+                  d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z">
+                </path>
+                <path d="M5 18v2"></path>
+                <path d="M19 18v2"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Interior Design</h4>
+              <p>Modern aesthetics that transform every space beautifully.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Client-Centric</h4>
+              <p>Your satisfaction is our benchmark at every stage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- services -->
+  <div class="services-wrapper" id="services">
+    <section class="services-section">
+      <div class="services-inner">
+
+        <!-- Header -->
+        <div class="services-head">
+          <span class="services-eyebrow">WHAT WE OFFER</span>
+          <h2 class="services-title">Our <span class="services-title-accent">Services</span></h2>
+          <div class="services-scroll-hint">
+            <span>→</span>
+            <span>Scroll to explore</span>
+          </div>
+        </div>
+
+        <!-- Horizontal Track -->
+        <div class="services-track-wrap">
+          <div class="services-track" id="servicesTrack">
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="interior.jpeg" alt="Interior Work">
+              </div>
+              <div class="svc-name-tag">Interior Work</div>
+              <div class="svc-body">
+                <span class="svc-num">01</span>
+                <h3>Interior Work</h3>
+                <p>Premium interior finishing that transforms living spaces with elegance and warmth.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="./servieceimage/plumber.jpg   " alt="Plumbing">
+              </div>
+              <div class="svc-name-tag">Plumbing</div>
+              <div class="svc-body">
+                <span class="svc-num">02</span>
+                <h3>Plumbing</h3>
+                <p>Expert plumbing solutions for residential and commercial projects, done right.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="./servieceimage/electrical.jpg" alt="Electrical">
+              </div>
+              <div class="svc-name-tag">Electrical</div>
+              <div class="svc-body">
+                <span class="svc-num">03</span>
+                <h3>Electrical</h3>
+                <p>Safe and certified electrical installations, wiring and panel upgrades.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="servieceimage/tiles.jpg" alt="Tiles Works">
+              </div>
+              <div class="svc-name-tag">Tiles Works</div>
+              <div class="svc-body">
+                <span class="svc-num">04</span>
+                <h3>Tiles Works</h3>
+                <p>Precision tiling for floors, walls, and bathrooms with flawless finish.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="./servieceimage/painting.jpg" alt="Painting">
+              </div>
+              <div class="svc-name-tag">Painting</div>
+              <div class="svc-body">
+                <span class="svc-num">05</span>
+                <h3>Painting</h3>
+                <p>Interior and exterior painting with premium paints for lasting beauty.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="servieceimage/consultancy.jpg" alt="Consulting">
+              </div>
+              <div class="svc-name-tag">Consulting</div>
+              <div class="svc-body">
+                <span class="svc-num">06</span>
+                <h3>Consulting</h3>
+                <p>Expert design and construction consulting from concept to completion.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="./servieceimage/false ceiling.png" alt="False Ceiling">
+              </div>
+              <div class="svc-name-tag">False Ceiling</div>
+              <div class="svc-body">
+                <span class="svc-num">07</span>
+                <h3>False Ceiling</h3>
+                <p>Stylish false ceiling designs that enhance ambiance and conceal utilities.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="servieceimage/pvc.jpg" alt="PVC Works">
+              </div>
+              <div class="svc-name-tag">PVC Works</div>
+              <div class="svc-body">
+                <span class="svc-num">08</span>
+                <h3>PVC Works</h3>
+                <p>Durable PVC paneling, doors, and fixtures for modern interiors.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="servieceimage/welding.png" alt="Welding Works">
+              </div>
+              <div class="svc-name-tag">Welding Works</div>
+              <div class="svc-body">
+                <span class="svc-num">09</span>
+                <h3>Welding Works</h3>
+                <p>Structural and decorative welding for gates, grills, and frameworks.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="servieceimage/paver block.png" alt="Paver Block Works">
+              </div>
+              <div class="svc-name-tag">Paver Block Works</div>
+              <div class="svc-body">
+                <span class="svc-num">10</span>
+                <h3>Paver Block Works</h3>
+                <p>Beautiful and durable paver block driveways, pathways and courtyards.</p>
+              </div>
+            </div>
+
+            <div class="svc-card">
+              <div class="svc-img-wrap">
+                <img src="servieceimage/renovation.jpg" alt="Renovation Works">
+              </div>
+              <div class="svc-name-tag">Renovation Works</div>
+              <div class="svc-body">
+                <span class="svc-num">11</span>
+                <h3>Renovation Works</h3>
+                <p>Complete home and office renovation services that breathe new life.</p>
+              </div>
+            </div>
+
+            <!-- End spacer -->
+            <div class="svc-end-spacer"></div>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <!-- <div class="services-progress-bar" style="margin: 0 40px;">
+          <div class="services-progress-fill" id="svcProgress"></div>
+        </div> -->
+
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Our Projects Section -->
+  <section class="projects-section" id="projects">
+    <div class="projects-container">
+
+      <!-- Section Header -->
+      <div class="projects-header">
+        <h2 class="projects-title">
+          Our Recent <span class="projects-title-accent"> Projects</span>
+        </h2>
+        <p class="projects-subtitle">
+          Explore our completed residential construction projects across Tamilnadu
+          showcasing quality, precision, and modern design.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="projects-filters">
+        <button class="filter-btn active" data-filter="completed" id="filter-completed">Completed</button>
+        <button class="filter-btn" data-filter="ongoing" id="filter-ongoing">On Going</button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- Card 1 -->
+        <div class="project-card" data-status="completed">
+          <div class="project-card-img-wrap">
+            <img src="interior.jpeg" alt="Inclined Wall Residence" class="project-card-img" />
+            <div class="project-card-overlay">
+              <span class="project-card-badge">Completed</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-name">Inclined Wall Residence</h3>
+            <p class="project-card-location">
+              <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              Perumbakkam, Chennai
+            </p>
+            <div class="project-card-details">
+              <div class="detail-row">
+                <span class="detail-icon">▦</span>
+                <span class="detail-label">Plot Area:</span>
+                <span class="detail-value">1150 SQ.FT</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-icon">▦</span>
+                <span class="detail-label">Build Up Area:</span>
+                <span class="detail-value">1380 SQ.FT</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-icon">▦</span>
+                <span class="detail-label">Portion:</span>
+                <span class="detail-value">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="project-card" data-status="completed">
+          <div class="project-card-img-wrap">
+            <img src="interior.jpeg" alt="Compact Villa" class="project-card-img" />
+            <div class="project-card-overlay">
+              <span class="project-card-badge">Completed</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-name">Compact Villa</h3>
+            <p class="project-card-location">
+              <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              Oragadam, Chennai
+            </p>
+            <div class="project-card-details">
+              <div class="detail-row">
+                <span class="detail-icon">▦</span>
+                <span class="detail-label">Plot Area:</span>
+                <span class="detail-value">953 SQ.FT</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-icon">▦</span>
+                <span class="detail-label">Build Up Area:</span>
+                <span class="detail-value">1135 SQ.FT</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-icon">▦</span>
+                <span class="detail-label">Portion:</span>
+                <span class="detail-value">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="project-card" data-status="ongoing">
+          <div class="project-card-img-wrap">
+            <img src="interior.jpeg" alt="Modern Country House" class="project-card-img" />
+            <div class="project-card-overlay">
+              <span class="project-card-badge ongoing">On Going</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-name">Modern Country House</h3>
+            <p class="project-card-location">
+              <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              Veppampattu, Chennai
+            </p>
+            <div class="project-card-details">
+              <div class="detail-row">
+                <span class="detail-icon">▦</span>
+                <span class="detail-label">Plot Area:</span>
+                <span class="detail-value">1974 SQ.FT</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-icon">▦</span>
+                <span class="detail-label">Build Up Area:</span>
+                <span class="detail-value">1654 SQ.FT</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-icon">▦</span>
+                <span class="detail-label">Portion:</span>
+                <span class="detail-value">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- contact -->
+
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <!-- Header -->
+      <div class="contact-header">
+        <h2 class="contact-title">
+          Contact <span class="contact-title-accent"> Us</spans>
+        </h2>
+        <p class="contact-subtitle">
+          Let's turn your dreams into memorable events. Reach out to us for personalized planning
+          and impeccable execution
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="icon">🏠</div>
+            <div>
+              <h4>Find us</h4>
+              <p>SS COMPLEX , 1ST,<br>FLOOR ,TIRUVANNAMALAI MAIN ROAD ,<br>INDIAN BANK UPSTAIRS,GINGEE,604202</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon">📞</div>
+            <div>
+              <h4>Call us</h4>
+              <p>+91 9629634417</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon">✉️</div>
+            <div>
+              <h4>Mail us</h4>
+              <p>rjkconstruction19@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form">
+          <h3>Send Message</h3>
+          <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="4" placeholder="Type your Message..." required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- Left: Brand -->
+      <div class="footer-col brand">
+        <div class="footer-logo">
+          <img src="weblogo.png" width="70" height="60" alt="RJK Construction Interiors Logo" />
+          <!-- <span class="logo-icon">🔥</span>
+          <span class="logo-text">RJK</span> -->
+        </div>
+        <p>
+          Specializing in distinctive construction and interior works, we bring years of experience
+          to transforming creative visions into reality.
+        </p>
+
+        <div class="socials">
+          <a href="#" class="btn-instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="#ffffff" width="20" height="20">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+            </svg>
+          </a>
+          <a href="#" class="btn-gmail" aria-label="Gmail">
+            <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+              <path d="M15.75 21V11.25L22.5 6.1875V19.5C22.5 20.3284 21.8284 21 21 21H15.75Z" fill="#34A853" />
+              <path d="M3 21H8.25V11.25L1.5 6.1875V19.5C1.5 20.3284 2.17157 21 3 21Z" fill="#4285F4" />
+              <path d="M15.75 11.25L12 14.0625L8.25 11.25V3.375L12 6.1875L15.75 3.375V11.25Z" fill="#EA4335" />
+              <path d="M22.5 6.1875L15.75 11.25V3.375L19.5 0.5625C21.0506 -0.600465 22.5 0.505705 22.5 2.4375V6.1875Z"
+                fill="#FBBC04" />
+              <path d="M1.5 6.1875L8.25 11.25V3.375L4.5 0.5625C2.94936 -0.600465 1.5 0.505705 1.5 2.4375V6.1875Z"
+                fill="#C5221F" />
+            </svg>
+          </a>
+          <a href="#" class="btn-facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="#ffffff" width="20" height="20">
+              <path
+                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Middle: Services -->
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Contact -->
+      <div class="footer-col">
+        <h3>Contact us</h3>
+        <p>SS COMPLEX , 1ST,<br>FLOOR ,TIRUVANNAMALAI MAIN ROAD ,<br>INDIAN BANK UPSTAIRS,GINGEE,604202</p>
+        <!-- <p>52 East Cost Road, Little Mount,<br>Chennai, 600028</p> -->
+        <p>+91 9629634417</p>
+        <p>rjkconstruction19@gmail.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 RJK Construction & Interiors. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ── Floating Action Buttons ──────────────────────────────────── -->
+  <div class="fab-group" id="fabGroup">
+
+    <!-- WhatsApp FAB -->
+    <a id="fab-whatsapp" class="fab fab-whatsapp" href="https://wa.me/919629634417" target="_blank"
+      rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <svg class="fab-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+      </svg>
+      <span class="fab-label">WhatsApp</span>
+    </a>
+
+    <!-- Scroll-to-Top FAB -->
+    <button id="fab-scroll-top" class="fab fab-scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Scroll to top" title="Back to top">
+      <svg class="fab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+  </div>
+  <!-- ── /Floating Action Buttons ───────────────────────────────── -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
