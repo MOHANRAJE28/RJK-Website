@@ -386,7 +386,7 @@ body {
 .about-section {
   padding: 50px 6% 80px;
   /* reduced top padding = less gap from hero */
-  background: #ffffff url('house1.png') no-repeat left center;
+  background: #ffffff url('image/house1.png') no-repeat left center;
   background-size: 52% auto;
   /* blueprint fills left ~half, no box */
   position: relative;
